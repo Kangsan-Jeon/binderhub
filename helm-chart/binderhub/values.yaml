@@ -16,7 +16,7 @@ nodeSelector: {}
 
 image:
   name: jupyterhub/k8s-binderhub
-  tag: 'local'
+  tag: '0.2.0-n365.h8cd719a'
 
 # registry here is only used to create docker config.json
 registry:
@@ -161,7 +161,7 @@ imageCleaner:
   enabled: true
   image:
     name: jupyterhub/k8s-image-cleaner
-    tag: 'local'
+    tag: '0.2.0-n323.h10dfce2'
     repository: jupyterhub/k8s-image-cleaner
   # delete an image at most every 5 seconds
   delay: 5
