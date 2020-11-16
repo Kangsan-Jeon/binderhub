@@ -7,7 +7,7 @@ charts:
   - name: binderhub
     imagePrefix: daisyjeon/k8s- # jupyterhub/k8s-
     repo:
-      git: Kangsan-Jeon/binderhub/helmchart # jupyterhub/helm-chart
+      git: Kangsan-Jeon/binderhub/helm-chart # jupyterhub/helm-chart
       published: https://jupyterhub.github.io/helm-chart
     resetTag: local
     resetVersion: 0.2.0
