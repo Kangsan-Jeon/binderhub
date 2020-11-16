@@ -16,7 +16,7 @@ nodeSelector: {}
 
 image:
   name: daisyjeon/k8s-binderhub
-  tag: '0.2.0-n367.h05cc7b9'
+  tag: '0.2.0-n368.h1f79e55'
 
 # registry here is only used to create docker config.json
 registry:
@@ -161,7 +161,7 @@ imageCleaner:
   enabled: true
   image:
     name: daisyjeon/k8s-image-cleaner
-    tag: '0.2.0-n367.h05cc7b9'
+    tag: '0.2.0-n368.h1f79e55'
     repository: daisyjeon/k8s-image-cleaner
   # delete an image at most every 5 seconds
   delay: 5
