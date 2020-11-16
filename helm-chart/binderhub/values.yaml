@@ -16,7 +16,7 @@ nodeSelector: {}
 
 image:
   name: daisyjeon/k8s-binderhub
-  tag: '0.2.0-n368.h1f79e55'
+  tag: '0.2.0-n369.hb50a6cf'
 
 # registry here is only used to create docker config.json
 registry:

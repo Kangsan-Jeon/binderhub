@@ -581,7 +581,6 @@ class GitLabRepoProvider(RepoProvider):
         return '-'.join(p.replace('-', '_-') for p in self.namespace.split('/'))
 
     def get_repo_url(self):
-        print(f"http://{self.hostname}/{self.namespace}.git")
         return f"http://{self.hostname}/{self.namespace}.git"  # f"https://{self.hostname}/{self.namespace}.git"
 
     async def get_resolved_ref_url(self):
