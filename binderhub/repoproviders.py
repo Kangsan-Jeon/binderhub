@@ -548,11 +548,11 @@ class GitLabRepoProvider(RepoProvider):
 
         namespace = urllib.parse.quote(self.namespace, safe='')
         client = AsyncHTTPClient()
-        api_url = "https://{hostname}/api/v4/projects/{namespace}/repository/commits/{ref}".format(
+        api_url = "http://{hostname}/api/v4/projects/{namespace}/repository/commits/{ref}".format(
             hostname=self.hostname,
             namespace=namespace,
             ref=urllib.parse.quote(self.unresolved_ref, safe=''),
-        )
+        )   # "https://{hostname}/api/v4/projects/{namespace}/repository/commits/{ref}
         self.log.debug("Fetching %s", api_url)
 
         if self.auth:
@@ -581,12 +581,12 @@ class GitLabRepoProvider(RepoProvider):
         return '-'.join(p.replace('-', '_-') for p in self.namespace.split('/'))
 
     def get_repo_url(self):
-        return f"https://{self.hostname}/{self.namespace}.git"
+        return f"http://{self.hostname}/{self.namespace}.git"  # f"https://{self.hostname}/{self.namespace}.git"
 
     async def get_resolved_ref_url(self):
         if not hasattr(self, 'resolved_ref'):
             self.resolved_ref = await self.get_resolved_ref()
-        return f"https://{self.hostname}/{self.namespace}/tree/{self.resolved_ref}"
+        return f"http://{self.hostname}/{self.namespace}/tree/{self.resolved_ref}" # f"https://{self.hostname}/{self.namespace}/tree/{self.resolved_ref}"
 
 
 class GitHubRepoProvider(RepoProvider):
