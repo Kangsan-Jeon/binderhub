@@ -484,7 +484,7 @@ class GitLabRepoProvider(RepoProvider):
 
     name = Unicode('GitLab')
 
-    hostname = Unicode('gitlab.example.com', config=True,
+    hostname = Unicode('gitlab.example.com:31203', config=True,
         help="""The host of the GitLab instance
 
         For personal GitLab servers.

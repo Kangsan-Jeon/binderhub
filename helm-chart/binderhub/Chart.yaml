@@ -1,4 +1,4 @@
 apiVersion: v1
 description: A helm chart to install Binder
 name: binderhub
-version: 0.2.0-n369.hb50a6cf
+version: 0.2.0-n370.haeaeabb
